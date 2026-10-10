@@ -11,6 +11,7 @@ description: Preserve file encoding and whitespace when editing or creating file
 - C# (`.cs`): UTF-8 with BOM, CRLF.
 - C++ sources and headers (`.cpp`, `.cc`, `.cxx`, `.h`, `.hpp`, `.hxx`, `.inl`): UTF-8 with BOM, CRLF.
 - UE and Unity shaders (`.usf`, `.ush`, `.shader`, `.hlsl`, `.compute`, `.cginc`): UTF-8 without BOM, CRLF.
+- For newly created C#, C++ source/header, and shader files listed above, prefer tabs for indentation unless the repository explicitly requires another style. Use spaces only for alignment where needed.
 - These defaults do not authorize converting existing files. Preserve their format unless the user explicitly requests normalization; then apply the defaults within the requested scope.
 - Preserve tabs versus spaces and indent width; never convert between them as an unrelated edit. Match nearby indentation, continuation alignment, and spacing without introducing inconsistent mixtures.
 - Keep changes local; avoid whole-file formatting, whitespace cleanup, or encoding conversion.
